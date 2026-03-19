@@ -1,6 +1,7 @@
 
-export function Todos({todos})
+export function Todos({props})
 {
+    const todos = props.todos;
     return <div>
         {todos.map(function(todo){
             return <div>
