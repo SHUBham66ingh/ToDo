@@ -6,35 +6,20 @@ import { useEffect } from 'react';
 
 
 function App() {
-
   const[todos , setTodos] = useState([]);
-
-  useEffect(()=>{
-
-  } , [])
-
-  fetch("")
-  .then(async function(res){
-    const json = await res.json();
-    localStorage.setItem("token" , json.token);
-    setTodos(json.todos);
-  }) ,
-  headers : {
-    "Content-type" : "application/json",
-    "Authorization" : "Bea"
-  }
-
- 
+  
   return (
     <div>
        <CreateTodo></CreateTodo>
-       <Todos todos={[
-        {
-        title : "asd",
-        description : "asdasd",
-        complete : false
-        }
-       ]}></Todos>
+       <Todos todos={
+        [
+          {
+            title : "acd",
+            description : "asdasas",
+            completed : false
+          }
+        ]
+       }></Todos>
     </div>
   )
 }
