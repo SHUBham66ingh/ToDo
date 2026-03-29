@@ -7,7 +7,14 @@ import { useEffect } from 'react';
 
 function App() {
   const[todos , setTodos] = useState([]);
-  
+
+  fetch("https://localhost:3000/todos")
+  .then(async function(res)
+    {
+  const json = await res.json();
+  setTodos(json.todos);
+    })
+
   return (
     <div>
        <CreateTodo></CreateTodo>
